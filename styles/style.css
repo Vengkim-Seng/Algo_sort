@@ -1,0 +1,387 @@
+/* Importing fonts from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Patrick+Hand&family=Quicksand:wght@300;400;500;600&display=swap");
+
+/* Resetting default styles and setting global styles */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand"; /* Default font family */
+  color: #fff; /* Default text color */
+}
+
+/* Body styles */
+body {
+  /* Background gradient animation */
+  background: linear-gradient(
+    -45deg,
+    #212121,
+    rgb(55, 53, 53),
+    #212121,
+    #232121
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh; /* Full height */
+  padding: 1rem; /* Padding for body content */
+  color: #fff; /* Text color */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 3s; /* Smooth transition for opacity */
+}
+
+/* Keyframe animation for background gradient */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Anchor tag styles */
+a {
+  text-decoration: none; /* Remove underline */
+}
+
+/* Dark mode styles for body */
+body.dark {
+  background-color: #212121; /* Dark background color */
+  color: #fff; /* Light text color */
+}
+
+/* Side navigation styles */
+.sidenav {
+  margin: 10px; /* Margin around the navigation */
+  height: auto; /* Auto height */
+  width: 12.5rem; /* Width of the navigation */
+  position: fixed; /* Fixed positioning */
+  border-radius: 10%; /* Rounded corners */
+  background: rgba(239, 239, 255, 0.19); /* Background with opacity */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Box shadow */
+  backdrop-filter: blur(9.1px); /* Blur effect */
+  -webkit-backdrop-filter: blur(9.1px); /* Blur effect for webkit browsers */
+  border: 1px solid rgba(239, 239, 255, 0.3); /* Border */
+  align-items: center; /* Center alignment */
+  justify-content: center; /* Center alignment */
+}
+
+/* Container styles */
+.container {
+  max-width: 60vw; /* Maximum width */
+  height: 70vh; /* Height */
+  width: 60%; /* Width */
+  margin: 0 auto; /* Center alignment */
+  display: flex; /* Flex display */
+  flex-direction: row; /* Flex direction */
+  align-items: center; /* Center alignment */
+  justify-content: center; /* Center alignment */
+  padding: 20px 0px; /* Padding */
+}
+
+/* Bars container styles */
+.bars_container {
+  display: flex; /* Flex display */
+  flex-direction: row; /* Flex direction */
+  transform: scaleX(-1); /* Reverse direction */
+}
+
+/* Bar styles */
+.bar {
+  width: 2px; /* Width */
+  background-color: #56697b; /* Background color */
+  margin: 0 0.8px; /* Margin */
+  transition: height 0.5s ease-in-out; /* Transition effect */
+  transform: scaleX(-1); /* Reverse direction */
+}
+
+/* Buttons container styles */
+.buttons_container {
+  padding: 1.5rem; /* Padding */
+}
+
+/* Button and select styles */
+.buttons_container > button,
+select {
+  margin: 1rem 0; /* Margin */
+  width: 150px; /* Width */
+  text-align: center; /* Text alignment */
+  height: 30px; /* Height */
+  background-color: #677685; /* Background color */
+  border: none; /* No border */
+  border-radius: 5px; /* Border radius */
+  color: white; /* Text color */
+  font-size: 14px; /* Font size */
+  cursor: pointer; /* Cursor type */
+  transition: 0.2s ease-in-out; /* Transition effect */
+}
+
+/* Slider styles */
+#slider {
+  width: 150px; /* Width */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #56697b; /* Background color */
+}
+
+/* Heading styles */
+h1 {
+  padding-top: 1.5rem; /* Padding top */
+  text-align: center; /* Text alignment */
+  color: #fff; /* Text color */
+}
+
+/* Dark mode styles for heading */
+h1.dark {
+  color: white; /* Light text color */
+}
+
+/* Footer styles */
+footer {
+  font-size: 0.8rem; /* Font size */
+  text-align: center; /* Text alignment */
+}
+
+/* Table styles */
+table,
+th,
+td {
+  border-collapse: collapse; /* Collapse border */
+  padding: 5px; /* Padding */
+  border: #677685 solid 1px; /* Border */
+  text-align: center; /* Text alignment */
+  color: #677685; /* Text color */
+}
+
+/* Left position styles */
+.left {
+  bottom: 0; /* Bottom position */
+  left: 0; /* Left position */
+}
+
+/* Right position styles */
+.right {
+  width: 250px; /* Width */
+  height: auto; /* Auto height */
+  bottom: 0; /* Bottom position */
+  right: 0; /* Right position */
+  line-height: 1.4rem; /* Line height */
+}
+
+/* Superscript color */
+sup {
+  color: #ffffff; /* Text color */
+}
+
+/* Responsive styles for table, th, td */
+table,
+th,
+td {
+  font-size: 1rem; /* Font size */
+  border-collapse: collapse; /* Collapse border */
+  border: #ffffff solid 1px; /* Border */
+  text-align: center; /* Text alignment */
+  color: #ffffff; /* Text color */
+}
+
+/* Media query for screens with max width 700px */
+@media only screen and (max-width: 700px) {
+  /* Heading styles */
+  h1 {
+    padding-top: 1.2rem; /* Padding top */
+    text-align: center; /* Text alignment */
+    color: #fff; /* Text color */
+  }
+
+  /* Side navigation styles */
+  .sidenav {
+    margin: 10px; /* Margin */
+    height: auto; /* Auto height */
+    width: 9rem; /* Width */
+    position: fixed; /* Fixed positioning */
+    border-radius: 10%; /* Rounded corners */
+    padding: 0; /* Padding */
+    font-size: 0.5rem; /* Font size */
+    /* Glassmorphism styles */
+    background: rgba(239, 239, 255, 0.19); /* Background with opacity */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Box shadow */
+    backdrop-filter: blur(9.1px); /* Blur effect */
+    -webkit-backdrop-filter: blur(9.1px); /* Blur effect for webkit browsers */
+    border: 1px solid rgba(239, 239, 255, 0.3); /* Border */
+    align-items: center; /* Center alignment */
+    justify-content: center; /* Center alignment */
+  }
+
+  /* Container styles */
+  .container {
+    max-width: 80vw; /* Maximum width */
+    height: 65vh; /* Height */
+    width: 100%; /* Width */
+    margin: 0 auto; /* Center alignment */
+    display: flex; /* Flex display */
+    flex-direction: row; /* Flex direction */
+    align-items: center; /* Center alignment */
+    justify-content: center; /* Center alignment */
+    padding: 20px 0px; /* Padding */
+    overflow: auto; /* Auto overflow */
+  }
+
+  /* Button and select styles */
+  .buttons_container > button,
+  select {
+    margin: 0.3rem 0; /* Margin */
+    width: 100px; /* Width */
+    text-align: center; /* Text alignment */
+    height: 20px; /* Height */
+    background-color: #677685; /* Background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Border radius */
+    color: white; /* Text color */
+    font-size: 0.5rem; /* Font size */
+    cursor: pointer; /* Cursor type */
+    transition: 0.2s ease-in-out; /* Transition effect */
+  }
+
+  /* Slider styles */
+  #slider {
+    width: 100px; /* Width */
+  }
+
+  /* Footer styles */
+  footer {
+    font-size: 0.4rem; /* Font size */
+    text-align: center; /* Text alignment */
+  }
+
+  /* Bar styles */
+  .bar {
+    width: 0.8px; /* Width */
+    background-color: #56697b; /* Background color */
+    margin: 0 0.3px; /* Margin */
+    transition: height 0.5s ease-in-out; /* Transition effect */
+  }
+
+  /* Right position styles */
+  .right {
+    width: auto; /* Auto width */
+    height: auto; /* Auto height */
+    bottom: 0; /* Bottom position */
+    right: 0; /* Right position */
+    line-height: 0.6rem; /* Line height */
+  }
+
+  /* Responsive styles for table, th, td */
+  table,
+  th,
+  td {
+    font-size: 0.7rem; /* Font size */
+    border-collapse: collapse; /* Collapse border */
+    border: #929292 solid 1px; /* Border */
+    text-align: center; /* Text alignment */
+    color: #ffffff; /* Text color */
+  }
+}
+
+/* Media query for screens with max height 600px */
+@media only screen and (max-height: 600px) {
+  /* Heading styles */
+  h1 {
+    padding-top: 1.2rem; /* Padding top */
+    text-align: center; /* Text alignment */
+    color: #fff; /* Text color */
+  }
+
+  /* Side navigation styles */
+  .sidenav {
+    margin: 10px; /* Margin */
+    height: auto; /* Auto height */
+    width: 9rem; /* Width */
+    position: fixed; /* Fixed positioning */
+    border-radius: 10%; /* Rounded corners */
+    padding: 0; /* Padding */
+    font-size: 0.5rem; /* Font size */
+    /* Glassmorphism styles */
+    background: rgba(239, 239, 255, 0.19); /* Background with opacity */
+    border-radius: 16px; /* Rounded corners */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Box shadow */
+    backdrop-filter: blur(9.1px); /* Blur effect */
+    -webkit-backdrop-filter: blur(9.1px); /* Blur effect for webkit browsers */
+    border: 1px solid rgba(239, 239, 255, 0.3); /* Border */
+    align-items: center; /* Center alignment */
+    justify-content: center; /* Center alignment */
+  }
+
+  /* Container styles */
+  .container {
+    max-width: 80vw; /* Maximum width */
+    height: 65vh; /* Height */
+    width: 100%; /* Width */
+    margin: 0 auto; /* Center alignment */
+    display: flex; /* Flex display */
+    flex-direction: row; /* Flex direction */
+    align-items: center; /* Center alignment */
+    justify-content: center; /* Center alignment */
+    padding: 20px 0px; /* Padding */
+    overflow: auto; /* Auto overflow */
+  }
+
+  /* Button and select styles */
+  .buttons_container > button,
+  select {
+    margin: 0.3rem 0; /* Margin */
+    width: 100px; /* Width */
+    text-align: center; /* Text alignment */
+    height: 20px; /* Height */
+    background-color: #677685; /* Background color */
+    border: none; /* No border */
+    border-radius: 5px; /* Border radius */
+    color: white; /* Text color */
+    font-size: 0.5rem; /* Font size */
+    cursor: pointer; /* Cursor type */
+    transition: 0.2s ease-in-out; /* Transition effect */
+  }
+
+  /* Slider styles */
+  #slider {
+    width: 100px; /* Width */
+  }
+
+  /* Footer styles */
+  footer {
+    font-size: 0.4rem; /* Font size */
+    text-align: center; /* Text alignment */
+  }
+
+  /* Bar styles */
+  .bar {
+    width: 0.8px; /* Width */
+    background-color: #56697b; /* Background color */
+    margin: 0 0.3px; /* Margin */
+    transition: height 0.5s ease-in-out; /* Transition effect */
+  }
+
+  /* Right position styles */
+  .right {
+    width: auto; /* Auto width */
+    height: auto; /* Auto height */
+    bottom: 0; /* Bottom position */
+    right: 0; /* Right position */
+    line-height: 0.6rem; /* Line height */
+  }
+
+  /* Responsive styles for table, th, td */
+  table,
+  th,
+  td {
+    font-size: 0.7rem; /* Font size */
+    border-collapse: collapse; /* Collapse border */
+    border: #929292 solid 1px; /* Border */
+    text-align: center; /* Text alignment */
+    color: #ffffff; /* Text color */
+  }
+}

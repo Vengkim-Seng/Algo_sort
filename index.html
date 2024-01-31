@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title and icon -->
+    <title>Sorting Visualizer</title>
+    <link rel="icon" type="image/x-icon" href="sort.svg" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- External CSS for Toastify notifications -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body onload="document.body.style.opacity='1'">
+    <!-- Main heading -->
+    <h1>Sorting Visualizer</h1>
+
+    <!-- Left side navigation panel -->
+    <div class="sidenav left">
+      <!-- Buttons container -->
+      <div class="buttons_container box">
+        <span>Controls</span>
+        <!-- Button to generate a new array -->
+        <button id="randomizearray_button">Generate new array</button><br />
+
+        <!-- Element count slider -->
+        Elements <span id="output">125</span
+        ><input
+          type="range"
+          id="slider"
+          min="50"
+          max="200"
+          step="5"
+          value="125"
+          default="125"
+        /><br />
+
+        <!-- Algorithm selection dropdown -->
+        <select name="" id="algo">
+          <option selected hidden disabled>Choose Algorithm</option>
+          <option value="shell">Shell Sort</option>
+          <option value="bubble">Bubble Sort</option>
+          <option value="insertion">Insertion Sort</option>
+          <option value="selection">Selection Sort</option>
+          <option value="merge">Merge Sort</option>
+        </select>
+        <br />
+
+        <!-- Button to initiate sorting -->
+        <button id="sort_button">Sort</button>
+      </div>
+    </div>
+
+    <!-- Right side navigation panel -->
+    <div class="sidenav right">
+      <!-- Information container -->
+      <div class="buttons_container box">
+        <!-- Sorting time display -->
+        <div id="sortname">Sorting Time: 00:00 seconds</div>
+        <br />
+      </div>
+    </div>
+
+    <!-- Container for the bars representing elements to be sorted -->
+    <div class="container">
+      <div class="bars_container" id="bars_container"></div>
+    </div>
+
+    <!-- External JavaScript for Toastify notifications -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <!-- Internal JavaScript -->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
